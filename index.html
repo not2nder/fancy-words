@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="titulo">
+      <h2>
+        Conversor de Letras
+      </h2>
+    </div>
+    <div class="input">
+      <div class="input">
+        <input type="text" placeholder="Seu Texto" id="InputText" class="output">
+      </div>
+      <div class="buttons">
+        <button onclick="fraktur()" class="letra">𝔉𝔯𝔞𝔨𝔱𝔲𝔯</button>
+        <button onclick="mnspace()" class="letra">𝚂𝚙𝚊𝚌𝚎</button>
+        <button onclick="script()" class="letra">𝒞𝓊𝓇𝓈𝒾𝓋𝑒</button>
+        <button onclick="italic()" class="letra">𝘪𝘵𝘢𝘭𝘪𝘤</button>
+        <button onclick="fat()" class="letra">Ｆａｔ</button>
+        <button onclick="small()" class="letra">sᴍᴀʟʟ</button>
+        <button onclick="unk()" class="letra">ᖇOᑌᑎᗪ</button>
+        <button onclick="japanize()" class="letra">丁卂尸卂𠘨</button>
+      </div>
+      <div class="Output-Copy">
+        <input type="text" id="OutputText" placeholder="Novo Texto" class="output" readonly>
+        <button onclick="Copy()" class="CopyButton">Copiar</button>
+      </div>
+      <div class="light-dark">
+        <button id="DarkChk"> Modo Escuro</button>
+      </div>
+    </div>
+</body>
+<script>
+  const DarkChk = document.getElementById("DarkChk");
+  const container = document.querySelector('.container');
+  const buttons = document.querySelectorAll('button');
+
+  DarkChk.onclick = function () {
+    buttons.forEach(button => button.classList.toggle("active"));
+    container.classList.toggle("active");
+    document.body.classList.toggle('active');
+  };
+</script>
+
+</html>
