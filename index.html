@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Fancy Words</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="assets/icon.png">
 </head>
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -28,15 +29,16 @@
         <button onclick="italic()" class="letra">𝘪𝘵𝘢𝘭𝘪𝘤</button>
         <button onclick="fat()" class="letra">Ｆａｔ</button>
         <button onclick="small()" class="letra">sᴍᴀʟʟ</button>
+        <button onclick="bold()" class="letra">𝗯𝗼𝗹𝗱</button>
+        <button onclick="double()" class="letra">𝕕𝕠𝕦𝕓𝕝𝕖</button>
         <button onclick="unk()" class="letra">ᖇOᑌᑎᗪ</button>
-        <button onclick="japanize()" class="letra">丁卂尸卂𠘨</button>
       </div>
       <div class="Output-Copy">
         <input type="text" id="OutputText" placeholder="Novo Texto" class="output" readonly>
         <button onclick="Copy()" class="CopyButton">Copiar</button>
       </div>
       <div class="light-dark">
-        <button id="DarkChk"> Modo Escuro</button>
+        <button id="DarkChk">C/E</button>
       </div>
     </div>
 </body>
@@ -44,6 +46,8 @@
   const DarkChk = document.getElementById("DarkChk");
   const container = document.querySelector('.container');
   const buttons = document.querySelectorAll('button');
+  const input = document.getElementById('InputText');
+  const output = document.getElementById('output');
 
   DarkChk.onclick = function () {
     buttons.forEach(button => button.classList.toggle("active"));

@@ -66,11 +66,12 @@ button.active{
 }
 
 button.active:hover{
-  background-color: #ebebeb;
+  background-color: #51bd9c;
   color: #212121ff;
   border: solid 1px #4f4f4f;
   transform: scale(1.05);
   transition: all .1s ease-in-out;
+  border: none;
 }
 
 button[class=letra]:hover{
@@ -84,6 +85,8 @@ button[class=letra]:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 12px;
+  margin-bottom: 10px;
 }
 
 .CopyButton{
@@ -99,19 +102,17 @@ button[class=letra]:hover{
 }
 
 .CopyButton.active:hover{
-  background-color: #ebebeb;
-  color: #212121ff;
+  background-color: #ff0051;
+  color: rgb(255, 255, 255);
   border: solid 1px #757575;
   transform: scale(1.05);
+  border: none;
   transition: all .1s ease-in-out;
 }
 
-.button_icon{
-  display: inline-flex;
-  align-items: center;
-}
-
 .CopyButton:hover{
+  background-color: #ff0051;
+  color: white;
   transform: scale(1.1);
 }
 
@@ -119,6 +120,7 @@ div.input{
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-bottom: 12px;
 }
 
 input[class=output]{
@@ -138,5 +140,19 @@ input[class=output]{
 }
 
 .light-dark {
+  display: flex;
+  align-items: center;
   margin: auto;
+}
+
+button[id=DarkChk]{
+  margin: auto;
+  border-radius: 50%;
+}
+
+button[id=DarkChk]:hover{
+  background-color: #ff0051;
+  color: white;
+  border: none;
+  transition: all .1s ease-in-out;
 }
