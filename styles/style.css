@@ -21,18 +21,16 @@ body.active{
   display: grid;
   margin: auto;
   margin-top: 15vh;
+  transition: all .1s ease-in-out;
 }
 .container.active{
   background-color: #2e2d33;
   color: #fafafa;
-  box-shadow: 2px 3px 10px #3d3d3d;
+  box-shadow: none;
   transition: all .1s ease-in-out;
 }
 h2 {
   text-align: center;
-  font-family: mulish;
-}
-span {
   font-family: mulish;
 }
 
@@ -55,6 +53,7 @@ button{
   appearance: none;
   cursor: pointer;
   position: relative;
+  transition: all .1s ease-in-out;
 }
 
 button.active{
@@ -91,7 +90,7 @@ button[class=letra]:hover{
 
 .CopyButton{
   width: 100%;
-  transition: all .1s ;
+  transition: all .1s ease-in-out;
 }
 
 .CopyButton.active{
@@ -113,7 +112,7 @@ button[class=letra]:hover{
 .CopyButton:hover{
   background-color: #ff0051;
   color: white;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 div.input{
@@ -147,12 +146,17 @@ input[class=output]{
 
 button[id=DarkChk]{
   margin: auto;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  transition: all .2s ease-in-out;
 }
 
 button[id=DarkChk]:hover{
   background-color: #ff0051;
   color: white;
   border: none;
+  transform: scale(1.05);
   transition: all .1s ease-in-out;
 }
+0

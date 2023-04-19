@@ -7,6 +7,7 @@
   <title>Fancy Words</title>
   <link href="styles/style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <script src="scripts/script.js"></script>
 </head>
@@ -15,7 +16,7 @@
   <div class="container">
     <div class="titulo">
       <h2>
-        Conversor de Letras
+        Fontes Bonitas
       </h2>
     </div>
     <div class="input">
@@ -38,7 +39,10 @@
         <button onclick="Copy()" class="CopyButton">Copiar</button>
       </div>
       <div class="light-dark">
-        <button id="DarkChk">C/E</button>
+        <!-- <button id="DarkChk">Modo</button> -->
+        <button id="DarkChk" style="font-size:24px">
+          <i class="fa-regular fa-moon"></i>
+        </button>
       </div>
     </div>
 </body>
@@ -46,10 +50,14 @@
   const DarkChk = document.getElementById("DarkChk");
   const container = document.querySelector('.container');
   const buttons = document.querySelectorAll('button');
-  const input = document.getElementById('InputText');
-  const output = document.getElementById('output');
 
   DarkChk.onclick = function () {
+    if (container.getAttribute('class').includes("active")){
+      DarkChk.innerHTML = '<i class="fa-regular fa-moon"></i>'
+    } else{
+      DarkChk.innerHTML = '<i class="fa-sharp fa-regular fa-sun"></i>'
+    }
+
     buttons.forEach(button => button.classList.toggle("active"));
     container.classList.toggle("active");
     document.body.classList.toggle('active');
